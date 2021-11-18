@@ -26,10 +26,12 @@ const App = () => {
 
   useEffect(() => {
     fetchWeather(city);
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [city])
 
   useEffect(() => {
     fetchWeatherForecast(city);
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [weather])
 
   return (
