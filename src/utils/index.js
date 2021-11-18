@@ -55,7 +55,7 @@ export const convertDate = (dateStamp) => {
     const dateObject = new Date(dateStamp * 1000);
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thurday', 'Friday', 'Saturday'];
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    const dateFormat = days[(dateObject.getDay())] + ", " + (dateObject.getDate())+ " " + months[(dateObject.getMonth()+1)];
+    const dateFormat = days[(dateObject.getDay())] + ", " + (dateObject.getDate()) + " " + months[(dateObject.getMonth())];
     return dateFormat;
 }
 

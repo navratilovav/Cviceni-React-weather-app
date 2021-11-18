@@ -12,24 +12,24 @@ const App = () => {
   const [city, setCity] = useState('Brno');
   const [forecast, setForecast] = useState(null);
 
-  const fetchWeather = () => {
+  const fetchWeather = (city) => {
      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${appiKey}`)
     .then(response => response.json())
     .then(json => setWeather(json))
   }
 
-  const fetchWeatherForecast = () => {
+  const fetchWeatherForecast = (city) => {
     fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${appiKey}`)
     .then(response => response.json())
     .then(json => setForecast(getFiveDaysweatherForecast(json.list, 8))) 
   }
 
   useEffect(() => {
-    fetchWeather();
+    fetchWeather(city);
   }, [city])
 
   useEffect(() => {
-    fetchWeatherForecast();
+    fetchWeatherForecast(city);
   }, [weather])
 
   return (
