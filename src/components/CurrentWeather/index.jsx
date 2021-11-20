@@ -16,13 +16,14 @@ const CurrentWeather = ({weather}) => {
                     {Math.round(weather.main.temp)}
                   </span>
                   <span className="weather__temp-unit">°C</span>
+                  <div className="weather__description" id="popis">{weather.weather[0].main}
+                  </div>
                 </div>
                 <div className="weather__section weather__section--icon" id="ikona">
                   <img
                     src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
                     alt="current weather icon"
                   />                  
-                  <div className="weather__description" id="popis">{weather.weather[0].description}</div>
                 </div>
               </div>
               <div className="weather__inner">

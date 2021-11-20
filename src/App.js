@@ -9,7 +9,7 @@ const App = () => {
 
   const appiKey = process.env.REACT_APP_MY_API_ID;
   const [weather, setWeather] = useState(null);
-  const [city, setCity] = useState('Brno');
+  const [city, setCity] = useState('Olomouc');
   const [forecast, setForecast] = useState(null);
 
   const fetchWeather = (city) => {
